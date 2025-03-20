@@ -57,3 +57,45 @@ img {
     height: auto;
     margin-top: 1em;
 }
+
+/* Content Section Styles */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 2em 0;
+    padding: 1em;
+}
+
+.reverse-section {
+    flex-direction: row-reverse; /* Reverses the order of child elements */
+}
+
+.image-container, .text-container {
+    flex: 1;
+    padding: 1em;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Specific Image Sizes for Sections */
+#section1-image {
+    width: 50%; /* Adjust width for the first section image */
+    max-width: 400px; /* Optional: Set a maximum width */
+}
+
+#section2-image {
+    width: 60%; /* Adjust width for the second section image */
+    max-width: 300px; /* Optional: Set a maximum width */
+}
+
+#section3-image {
+    width: 70%; /* Adjust width for the third section image */
+    max-width: 350px; /* Optional: Set a maximum width */
+}
