@@ -1,9 +1,11 @@
+/* Global Styles */
 body {
-    font-family: 'IvyPresto Display', 'Light Italic';
+    font-family: 'Arial', sans-serif;
+    color: #304897; /* Set a default text color */
     margin: 0;
     padding: 0;
     background-image: url('../assets/images/background.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -14,16 +16,22 @@ main {
     align-items: center;
     padding: 2em;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-h1, p {
-    color: #304897; /* Main text color */
-    background-color: rgba(255, 255, 255, 0.8); /* White background behind text */
-    padding: 0.5em;
-    border-radius: 5px;
+h1, h2, h3, h4, h5, h6 {
+    color: #304897; /* Specific color for headings */
+    font-family: 'YourChosenFont', sans-serif; /* Ensure headings use the same font */
     margin: 0.5em 0;
 }
 
+p {
+    color: #304897; /* Specific color for paragraphs */
+    font-family: 'YourChosenFont', sans-serif; /* Ensure paragraphs use the same font */
+    margin: 0.5em 0;
+}
+
+/* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -31,15 +39,27 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 1em;
+    border-bottom: 2px solid #ccc; /* Line below the menu */
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+}
+
+nav ul li:not(:last-child):after {
+    content: '|';
+    position: absolute;
+    right: -0.5em;
+    color: #ccc; /* Line color between items */
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #304897; /* Specific color for links */
     text-decoration: none;
     font-weight: bold;
-    background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent */
-    padding: 0.5em 1em;
-    border-radius: 5px;
+    font-family: 'YourChosenFont', sans-serif; /* Ensure links use the same font */
+    padding: 0.5em;
 }
 
 img {
