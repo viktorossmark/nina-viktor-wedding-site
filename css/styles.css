@@ -4,7 +4,7 @@ body {
     color: #304897; /* Set a default text color */
     margin: 0;
     padding: 0;
-    background-image: url('../assets/images/background.png');
+    background-image: url('../assets/images/background_blue.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,39 +31,30 @@ p {
     margin: 0.5em 0;
 }
 
-/* Navigation Styles */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 1em 0;
+/* Header and Button Styles */
+header {
     display: flex;
-    justify-content: center;
-    gap: 1em;
-    border-bottom: 2px solid #ccc; /* Line below the menu */
+    justify-content: flex-end;
+    padding: 1em;
 }
 
-nav ul li {
-    display: inline;
-    position: relative;
-}
-
-nav ul li:not(:last-child):after {
-    content: '|';
-    position: absolute;
-    right: -0.5em;
-    color: #ccc; /* Line color between items */
-}
-
-nav ul li a {
-    color: #304897; /* Specific color for links */
+.rsvp-button {
+    background-color: #304897; /* Button color */
+    color: #ffffff; /* Text color */
     text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
     font-weight: bold;
-    font-family: 'YourChosenFont', sans-serif; /* Ensure links use the same font */
-    padding: 0.5em;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.rsvp-button:hover {
+    background-color: #FACA98; /* Darken on hover */
 }
 
 img {
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
     margin-top: 1em;
 }
