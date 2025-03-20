@@ -1,10 +1,10 @@
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'URW Chancery L', 'cursive';
     color: #304897; /* Set a default text color */
     margin: 0;
     padding: 0;
-    background-image: url('../assets/images/background_blue.png');
+    background-image: url('../assets/images/tall_background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,13 +20,13 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
     color: #304897; /* Specific color for headings */
-    font-family: 'YourChosenFont', sans-serif; /* Ensure headings use the same font */
+    font-family: 'URW Chancery L', 'cursive'; /* Ensure headings use the same font */
     margin: 0.5em 0;
 }
 
 p {
     color: #304897; /* Specific color for paragraphs */
-    font-family: 'YourChosenFont', sans-serif; /* Ensure paragraphs use the same font */
+    font-family: 'URW Chancery L', 'cursive'; /* Ensure paragraphs use the same font */
     margin: 0.5em 0;
 }
 
