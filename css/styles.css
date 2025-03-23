@@ -4,13 +4,15 @@
 
 /* Global Styles */
 body {
-    font-family: 'Montserrat', sans-serif; /* Update to Montserrat */
-    color: #304897; /* Set a default text color */
+    font-family: 'Montserrat', sans-serif;
+    color: #304897;
     margin: 0;
     padding: 0;
+    background-color: #FAF3E0; /* Fallback color */
     background-image: url('../assets/images/tall_background.png');
-    background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    background-position: top center;
     background-repeat: no-repeat;
 }
 
@@ -22,28 +24,30 @@ main {
     text-align: center;
 }
 
-h1, h2 {
-    font-family: 'Permanent Marker', cursive; /* Apply Permanent Marker to h1 only */
-    color: #304897; /* Same color as before */
-    font-size: 3em; /* Adjust size if needed */
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color: #304897;
+    font-size: 3em;
     margin: 0.5em 0;
 }
 
-h3, h4, h5, h6 {
-    color: #304897; /* Specific color for headings */
-    font-family: 'Montserrat', sans-serif; /* Ensure headings also use Montserrat */
-    font-weight: 700; /* Use bold weight for headings */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #304897;
+    font-weight: 700;
+    font-size: 2em;
     margin: 0.5em 0;
 }
 
 p {
-    color: #304897; /* Specific color for paragraphs */
-    font-family: 'Montserrat', sans-serif; /* Standardize paragraph font */
-    font-weight: 400; /* Regular weight for body text */
+    color: #304897;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     margin: 0.5em 0;
+    font-size: 1.1em;
+    line-height: 1.5;
 }
 
-/* Header and Button Styles */
 header {
     display: flex;
     justify-content: flex-end;
@@ -51,27 +55,32 @@ header {
 }
 
 .rsvp-button {
-    background-color: #304897; /* Button color */
-    color: #ffffff; /* Text color */
+    background-color: #304897;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif; /* Use Montserrat for consistency */
-    font-weight: 700; /* Bold font for button text */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     transition: background-color 0.3s ease;
 }
 
 .rsvp-button:hover {
-    background-color: #FACA98; /* Change color on hover */
+    background-color: #FACA98;
 }
 
 img {
-    max-width: 60%;
+    max-width: 90%;
     height: auto;
     margin-top: 1em;
 }
 
-/* Content Section Styles */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .content-section {
     display: flex;
     justify-content: space-between;
@@ -83,7 +92,7 @@ img {
 }
 
 .reverse-section {
-    flex-direction: row-reverse; /* Reverses the order of child elements */
+    flex-direction: row-reverse;
 }
 
 .image-container, .text-container {
@@ -91,24 +100,38 @@ img {
     padding: 1em;
 }
 
-.image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+/* Mobile Styles */
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
 
-/* Specific Image Sizes for Sections */
-#section1-image {
-    width: 80%; /* Adjust width for the first section image */
-    max-width: 400px; /* Optional: Set a maximum width */
-}
+    .content-section {
+        flex-direction: column;
+        text-align: center;
+    }
 
-#section2-image {
-    width: 80%; /* Adjust width for the second section image */
-    max-width: 400px; /* Optional: Set a maximum width */
-}
+    .image-container, .text-container {
+        flex: none;
+        width: 100%;
+        padding: 0.5em;
+    }
 
-#section3-image {
-    width: 80%; /* Adjust width for the third section image */
-    max-width: 400px; /* Optional: Set a maximum width */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .rsvp-button {
+        padding: 0.5em 1em;
+        font-size: 1em;
+    }
 }
