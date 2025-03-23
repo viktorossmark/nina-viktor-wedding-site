@@ -1,6 +1,10 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 /* Global Styles */
 body {
-    font-family: 'URW Chancery L', 'cursive';
+    font-family: 'Montserrat', sans-serif; /* Update to Montserrat */
     color: #304897; /* Set a default text color */
     margin: 0;
     padding: 0;
@@ -18,15 +22,24 @@ main {
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
+    font-family: 'Permanent Marker', cursive; /* Apply Permanent Marker to h1 only */
+    color: #304897; /* Same color as before */
+    font-size: 3em; /* Adjust size if needed */
+    margin: 0.5em 0;
+}
+
+h3, h4, h5, h6 {
     color: #304897; /* Specific color for headings */
-    font-family: 'URW Chancery L', 'cursive'; /* Ensure headings use the same font */
+    font-family: 'Montserrat', sans-serif; /* Ensure headings also use Montserrat */
+    font-weight: 700; /* Use bold weight for headings */
     margin: 0.5em 0;
 }
 
 p {
     color: #304897; /* Specific color for paragraphs */
-    font-family: 'URW Chancery L', 'cursive'; /* Ensure paragraphs use the same font */
+    font-family: 'Montserrat', sans-serif; /* Standardize paragraph font */
+    font-weight: 400; /* Regular weight for body text */
     margin: 0.5em 0;
 }
 
@@ -43,13 +56,13 @@ header {
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 5px;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat for consistency */
+    font-weight: 700; /* Bold font for button text */
     transition: background-color 0.3s ease;
 }
 
 .rsvp-button:hover {
-    background-color: #FACA98; /* Darken on hover */
+    background-color: #FACA98; /* Change color on hover */
 }
 
 img {
