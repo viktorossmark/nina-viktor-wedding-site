@@ -13,7 +13,7 @@ body {
     background-attachment: fixed;
     background-size: 100% auto;
     background-position: top center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 main {
