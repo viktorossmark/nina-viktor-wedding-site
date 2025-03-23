@@ -75,6 +75,11 @@ img {
     margin-top: 1em;
 }
 
+iframe {
+    margin: 20px 0;
+    border: none; /* Removes the visible frame around the form */
+}
+
 .image-container img {
     width: 100%;
     height: auto;
