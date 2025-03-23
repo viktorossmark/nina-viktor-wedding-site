@@ -86,16 +86,16 @@ img {
 
 /* Specific Image Sizes for Sections */
 #section1-image {
-    width: 50%; /* Adjust width for the first section image */
+    width: 80%; /* Adjust width for the first section image */
     max-width: 400px; /* Optional: Set a maximum width */
 }
 
 #section2-image {
-    width: 60%; /* Adjust width for the second section image */
-    max-width: 300px; /* Optional: Set a maximum width */
+    width: 80%; /* Adjust width for the second section image */
+    max-width: 400px; /* Optional: Set a maximum width */
 }
 
 #section3-image {
-    width: 70%; /* Adjust width for the third section image */
-    max-width: 350px; /* Optional: Set a maximum width */
+    width: 80%; /* Adjust width for the third section image */
+    max-width: 400px; /* Optional: Set a maximum width */
 }
