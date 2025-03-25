@@ -8,12 +8,12 @@ body {
     color: #304897;
     margin: 0;
     padding: 0;
-    background-color: #FAF3E0; /* Fallback color */
+    background-color: #30489752; /* Fallback color */
     background-image: url('../assets/images/tall_background.png');
     background-attachment: fixed;
-    background-size: 100% auto;
+    background-size: 100% auto; /* Force the background size to adjust for responsiveness */
     background-position: top center;
-    background-repeat: space repeat;
+    background-repeat: space repeat; /* Ensure the background repeats properly */
 }
 
 main {
@@ -22,6 +22,8 @@ main {
     align-items: center;
     padding: 2em;
     text-align: center;
+    max-width: 1200px; /* Limit the width of the main content */
+    margin: 0 auto; /* Center the main content horizontally */
 }
 
 h1 {
@@ -55,8 +57,8 @@ header {
 }
 
 .rsvp-button {
-    background-color: #304897;
-    color: #ffffff;
+    background-color: #304897; /* Button background color */
+    color: #ffffff; /* Button text color */
     text-decoration: none;
     padding: 0.5em 1em;
     border-radius: 5px;
@@ -66,7 +68,7 @@ header {
 }
 
 .rsvp-button:hover {
-    background-color: #FACA98;
+    background-color: #FACA98; /* Change button color on hover */
 }
 
 img {
@@ -75,17 +77,18 @@ img {
     margin-top: 1em;
 }
 
+/* Global Styles for Embedded Google Form */
 iframe {
-    margin: 20px 0;
-    border: none; /* Removes the visible frame around the form */
+    display: block; /* Makes the iframe take up the full width of its parent */
+    width: 100%; /* Ensure it’s responsive */
+    max-width: 800px; /* Set a maximum width for larger screens (optional) */
+    height: 100vh; /* Set the iframe’s height to match the viewport on larger screens */
+    margin: 20px auto; /* Center the iframe horizontally */
+    border: none; /* Remove any visible borders */
+    overflow: hidden; /* Hide unnecessary scrollbars */
 }
 
-.image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
+/* Section Styles */
 .content-section {
     display: flex;
     justify-content: space-between;
@@ -97,7 +100,7 @@ iframe {
 }
 
 .reverse-section {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; /* Reverse the layout for alternating sections */
 }
 
 .image-container, .text-container {
@@ -105,38 +108,62 @@ iframe {
     padding: 1em;
 }
 
+.image-container img {
+    width: 100%; /* Make images take up their full container width */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Images */
+#section1-image,
+#section2-image,
+#section3-image {
+    max-width: 100%; /* Remove hard width restrictions for responsiveness */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
+    body {
+        padding: 0; /* Remove unnecessary padding on mobile */
+    }
+
     main {
-        padding: 1em;
+        padding: 1em; /* Reduce padding for smaller screens */
     }
 
     .content-section {
-        flex-direction: column;
+        flex-direction: column; /* Stack sections vertically */
         text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5em; /* Reduce heading size for mobile */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Reduce heading size for mobile */
+    }
+
+    p {
+        font-size: 1em; /* Adjust paragraph font size for smaller screens */
+        line-height: 1.6; /* Improve readability */
+    }
+
+    .rsvp-button {
+        padding: 0.5em 1em; /* Ensure buttons have adequate clickable space */
+        font-size: 1em;
     }
 
     .image-container, .text-container {
         flex: none;
-        width: 100%;
+        width: 100%; /* Allow full-width elements on mobile */
         padding: 0.5em;
     }
 
-    h1 {
-        font-size: 2.5em;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    p {
-        font-size: 1em;
-        line-height: 1.6;
-    }
-
-    .rsvp-button {
-        padding: 0.5em 1em;
-        font-size: 1em;
+    iframe {
+        height: 85vh; /* Reduce iframe height so it fits better on mobile screens */
+        max-width: 100%; /* Ensure it doesn't exceed the screen's width */
+        margin: 10px 0; /* Tighten up margins */
     }
 }
