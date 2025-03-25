@@ -167,3 +167,30 @@ iframe {
         margin: 10px 0; /* Tighten up margins */
     }
 }
+
+/* Button Container (Optional for Layout) */
+.button-container {
+    display: flex;
+    gap: 1em; /* Add space between buttons */
+    justify-content: center; /* Center-align the buttons inside the container */
+    flex-wrap: wrap; /* Wrap buttons to the next line on smaller screens */
+    margin: 1em 0; /* Add spacing between the buttons and other content */
+}
+
+/* Map Buttons */
+.map-button {
+    display: inline-block; /* Allows padding and button-like behavior */
+    background-color: #304897; /* Button background color */
+    color: #ffffff; /* Button text color */
+    text-decoration: none; /* Remove underline on links */
+    padding: 0.8em 1.5em; /* Add interior spacing for a button look */
+    border-radius: 10px; /* Rounded corners */
+    font-family: 'Montserrat', sans-serif; /* Match your site's font */
+    font-size: 1em; /* Adjust text size */
+    font-weight: bold; /* Make text bold */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.map-button:hover {
+    background-color: #FACA98; /* Change color on hover */
+}
